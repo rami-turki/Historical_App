@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "193311489555",
+    "project_id": "dalelapp-c975d",
+    "storage_bucket": "dalelapp-c975d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193311489555:android:0908b50b4ac37b230d49e6",
+        "android_client_info": {
+          "package_name": "com.example.history_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW0pOeZAzhXtq430JdPKVH_m4Sqrg0rBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
