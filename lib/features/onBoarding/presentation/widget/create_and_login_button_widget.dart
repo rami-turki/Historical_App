@@ -5,16 +5,21 @@ import 'package:history_app/core/utils/app_fonts.dart';
 import 'package:history_app/core/utils/app_strings.dart';
 
 class CreateAndLoginButtonWidget extends StatelessWidget {
-  final void Function()? onTap;
+  final void Function()? loginNowTap;
+  final void Function()? registerNowTap;
 
-  const CreateAndLoginButtonWidget({super.key, this.onTap});
+  const CreateAndLoginButtonWidget({
+    super.key,
+    this.loginNowTap,
+    this.registerNowTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         GestureDetector(
-          onTap: onTap,
+          onTap: registerNowTap,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Container(
@@ -35,14 +40,17 @@ class CreateAndLoginButtonWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        Text(
-          AppStrings.loginNowString,
-          style: TextStyle(
-              decoration: TextDecoration.underline,
-              color: AppColors.deepBrown,
-              fontSize: 16,
-              fontFamily: AppFonts.poppins,
-              fontWeight: FontWeight.w400),
+        GestureDetector(
+          onTap: loginNowTap,
+          child: Text(
+            AppStrings.loginNowString,
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                color: AppColors.deepBrown,
+                fontSize: 16,
+                fontFamily: AppFonts.poppins,
+                fontWeight: FontWeight.w400),
+          ),
         ),
         const SizedBox(height: 8),
       ],

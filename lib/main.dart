@@ -7,6 +7,7 @@ import 'package:history_app/core/services/service_locator.dart';
 import 'package:history_app/core/utils/databases/cache/cache_helper.dart';
 import 'package:history_app/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:history_app/features/home/presentation/widgets/new_nav_bar.dart';
+import 'package:history_app/features/onBoarding/presentation/screens/splash_screen.dart';
 import 'package:history_app/firebase_options.dart';
 
 void main() async {
@@ -43,6 +44,6 @@ class HistoryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: BottomHomeNavBar());
+        debugShowCheckedModeBanner: false, home: SplashScreen());
   }
 }

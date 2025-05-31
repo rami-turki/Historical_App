@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:history_app/core/utils/app_strings.dart';
+import 'package:history_app/features/auth/presentation/screens/sign_in_screen.dart';
+import 'package:history_app/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:history_app/features/onBoarding/data/models/onBoardng_model.dart';
 import 'package:history_app/features/onBoarding/functions/onBoarding_visited.dart';
 import 'package:history_app/features/onBoarding/presentation/widget/create_and_login_button_widget.dart';
@@ -62,7 +64,22 @@ class _Onboarding1State extends State<OnboardingScreen> {
                     subTitle: onBoardingData[index].subTitle),
                 const SizedBox(height: 88),
                 currentIndex == onBoardingData.length - 1
-                    ? const CreateAndLoginButtonWidget()
+                    ? CreateAndLoginButtonWidget(
+                        registerNowTap: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SignUpScreen(),
+                              ));
+                        },
+                        loginNowTap: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SignInScreen(),
+                              ));
+                        },
+                      )
                     : MyButtonWidget(
                         text: AppStrings.nextString,
                         onTap: () {
